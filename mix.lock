@@ -1,0 +1,4 @@
+%{
+  "apa": {:hex, :apa, "0.6.9", "1ff727fde6d4609b0267c9c02215bc019f90030c38334034ef6481da488e25b9", [:mix], [], "hexpm", "79b77cab2cee2c1e0fae0ecf847f16242e68c61324f49716b45bae8a4a789d56"},
+  "decimal": {:hex, :decimal, "2.1.1", "5611dca5d4b2c3dd497dec8f68751f1f1a54755e8ed2a966c2633cf885973ad6", [:mix], [], "hexpm", "53cfe5f497ed0e7771ae1a475575603d77425099ba5faef9394932b35020ffcc"},
+}
