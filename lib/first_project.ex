@@ -26,10 +26,10 @@ defmodule FirstProject do
   end
 
   #Calcula cada termo do somatório
-  # defp calculateTerm(x,0) do
-  #   x
-  # end
-  defp calculateTerm(x, idx) do
+  defp calculateTerm(x,0) do
+    x
+  end
+  defp calculateTerm(x, idx,prev) do
     exp = (idx*2) + 1
     # Pode ser otimizado {
     listEven = 2..(exp - 1)//2
@@ -42,8 +42,8 @@ defmodule FirstProject do
   end
 
   # Função correspondente ao somatório
-  defp calculateArcSin(x,epsilon, idx, sum) do
-    a = calculateTerm(x, idx)
+  defp calculateArcSin(x,epsilon, idx, sum,prev) do
+    a = calculateTerm(x, idx,prev)
     s = Decimal.add(a, sum)
     # Checa a condição de parada
     if Decimal.lt?((Decimal.sub(s,sum)),epsilon) do
@@ -62,6 +62,6 @@ defmodule FirstProject do
     # if Decimal.lt?((Decimal.sub(x,x)),epsilon) do
     #   x
     # end
-    calculateArcSin(x, epsilon, 1, x)
+    calculateArcSin(x, epsilon, 0, x)
   end
 end
