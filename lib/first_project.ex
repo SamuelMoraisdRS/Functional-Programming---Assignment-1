@@ -49,7 +49,7 @@ defmodule FirstProject do
     newTerm = calculateTerm(x, idx, prev)
     newSum = Decimal.add(newTerm, sum)
     # Checa a condição de parada
-    if Decimal.lt?(newTerm, epsilon) do  # se < epsilon
+    if Decimal.lt?(Decimal.sub(newSum,sum), epsilon) do  # se < epsilon
       Decimal.to_string(newSum)
       # s
     else
