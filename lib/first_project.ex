@@ -40,7 +40,7 @@ defmodule FirstProject do
     # a = Decimal.div(numerator, denominator)
     # x |> power(exp) |> Decimal.div(exp) |> Decimal.mult(a)
     exp = (2*idx) + 1
-    a = Decimal.mult(Decimal.div(Decimal.mult(power(x,2), exp - 2),exp),Decimal.div(exp - 2, exp - 1))
+    a = Decimal.mult(Decimal.div(Decimal.mult(power(x,2), exp - 2),exp),Decimal.from_float((exp - 2) / (exp - 1)))
     Decimal.mult(prev,a) # Retorno
   end
 
