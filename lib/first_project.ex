@@ -40,26 +40,13 @@ defmodule FirstProject do
     # a = Decimal.div(numerator, denominator)
     # x |> power(exp) |> Decimal.div(exp) |> Decimal.mult(a)
     exp = (2*idx) + 1
-    IO.puts("exp:")
-    IO.puts(exp)
-    IO.puts("exp-1")
-    IO.puts(exp-1)
-    IO.puts("exp-2")
-    IO.puts(exp-2)
-
     a = Decimal.mult(Decimal.div(Decimal.mult(power(x,2), exp - 2),exp),Decimal.div(exp - 2, exp - 1))
-    IO.puts("Novo termo")
-    IO.puts(Decimal.mult(prev,a))
     Decimal.mult(prev,a) # Retorno
   end
 
   # Função correspondente ao somatório
   defp calculateArcSin(x,epsilon, idx, sum, prev) do
     newTerm = calculateTerm(x, idx, prev)
-    IO.puts("Novo termo do somatorio:")
-    IO.puts(newTerm)
-    IO.puts("epsilon")
-    IO.puts(epsilon)
     newSum = Decimal.add(newTerm, sum)
     # Checa a condição de parada
     if Decimal.lt?(newTerm, epsilon) do  # se < epsilon
