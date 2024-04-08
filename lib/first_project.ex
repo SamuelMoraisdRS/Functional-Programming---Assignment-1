@@ -45,26 +45,26 @@ defmodule FirstProject do
   end
 
   # Função correspondente ao somatório
-  defp calculateArcSin(x,epsilon, idx, sum, prev) do
+  def calculate(x,epsilon, idx \\ 0, sum \\ 0, prev \\ 0) do
+    Decimal.Context.set(%Decimal.Context{Decimal.Context.get() | precision: 800})
     newTerm = calculateTerm(x, idx, prev)
     newSum = Decimal.add(newTerm, sum)
-    # Checa a condição de parada
+    IO.puts(newSum)
     if Decimal.lt?(Decimal.sub(newSum,sum), epsilon) do  # se < epsilon
       Decimal.to_string(newSum)
       # s
     else
-    calculateArcSin(x, epsilon, idx + 1, newSum,newTerm)
+    calculate(x, epsilon, idx + 1, newSum,newTerm)
   end
   end
 
-  def calculate(x, epsilon) do
-    # Configuração da biblioteca de precisão infinita
-    Decimal.Context.set(%Decimal.Context{Decimal.Context.get() | precision: 2000})
-    # x = Decimal.from_float(x)
-    # epsilon = Decimal.from_float(epsilon)
-    # if Decimal.lt?((Decimal.sub(x,x)),epsilon) do
-    #   x
-    # end
-    calculateArcSin(x, epsilon, 0, 0, 0)
-  end
+  # def calculate(x, epsilon, idx \\ 0, sum \\ 0, prev \\ 0) do
+  #   # Configuração da biblioteca de precisão infinita
+  #   # x = Decimal.from_float(x)
+  #   # epsilon = Decimal.from_float(epsilon)
+  #   # if Decimal.lt?((Decimal.sub(x,x)),epsilon) do
+  #   #   x
+  #   # end
+  #   calculateArcSin(x, epsilon, 0, 0, 0)
+  # end
 end
