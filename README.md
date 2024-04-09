@@ -19,8 +19,9 @@ O projeto implementa o módulo ``Tarefa_1`` contendo a função ``calculate``, q
   ```elixir
   iex(1)> Tarefa_1.calculate(Decimal.new(1,1,-1),Decimal.new(1,1,-20)) 
   ```
+Para melhores detalhes da biblioteca, recomenda-se uma breve leitura da [documentação da biblioteca](https://hexdocs.pm/decimal/readme.html)
 A função retornará o número com a precisão indicada no formato de string.
-* O código do módulo está presente no arquivo [tarefa_1.ex](./lib/first_project.ex).
+* O código do módulo está presente no arquivo [tarefa_1.ex](./lib/tarefa_1.ex).
 
 
 
