@@ -17,6 +17,7 @@ defmodule Tarefa_1 do
   end
   defp calculateTerm(x, idx, prev) do # Para idx > 0
     exp = (2*idx) + 1
+    # expressão para cálculo do novo termo
     a = Decimal.mult(Decimal.div(Decimal.mult(power(x,2), exp - 2),exp),Decimal.from_float((exp - 2) / (exp - 1)))
     Decimal.mult(prev,a) # Retorno
   end
@@ -29,7 +30,6 @@ defmodule Tarefa_1 do
     newSum = Decimal.add(newTerm, sum)
     if Decimal.lt?(Decimal.sub(newSum,sum), epsilon) do  # se < epsilon
       Decimal.to_string(newSum)
-      # newSum
     else
     calculate(x, epsilon, idx + 1, newSum,newTerm)
   end
