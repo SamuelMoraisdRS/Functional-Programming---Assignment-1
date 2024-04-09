@@ -1,6 +1,5 @@
 # Programação Funcional - Tarefa 1
 
-**TODO: Add description**
 
 ## Instalação
 

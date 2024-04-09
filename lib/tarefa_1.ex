@@ -23,6 +23,7 @@ defmodule Tarefa_1 do
 
   # Função correspondente ao somatório
   def calculate(x,epsilon, idx \\ 0, sum \\ 0, prev \\ 0) do
+    # Configuração da biblioteca Decimal
     Decimal.Context.set(%Decimal.Context{Decimal.Context.get() | precision: 800})
     newTerm = calculateTerm(x, idx, prev)
     newSum = Decimal.add(newTerm, sum)
