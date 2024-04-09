@@ -1,21 +1,26 @@
-# FirstProject
+# Programação Funcional - Tarefa 1
 
-**TODO: Add description**
 
-## Installation
+## Instalação
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `first_project` to your list of dependencies in `mix.exs`:
+* Clone o repositório em seu computador, pode ser feito com o comando:
+  ```
+  git clone https://github.com/SamuelMoraisdRS/Functional-Programming---Assignment-1.git 
+  ```
+* No diretório do projeto, instale as dependências necessárias com o comando:
+  ```
+  mixs deps.get
+  ``` 
+* Use o comando  ``iex -S mix`` para compilar o projeto e inicializar o ambiente iEx.
 
-```elixir
-def deps do
-  [
-    {:first_project, "~> 0.1.0"}
-  ]
-end
-```
+## Uso
+O projeto implementa o módulo ``Tarefa_1`` contendo a função ``calculate``, que soluciona o problema 9 da avaliação. A função aceita como argumentos dois parâmetros do tipo **float implementado pela biblioteca Decimal.** Ou seja, as entradas da função devem ser desse tipo. Para criar um número utilizando a biblioteca, pode usar a função ``new`` do módulo ``Decimal``. Por exemplo:
+  ```elixir
+  iex(1)> Tarefa_1.calculate(Decimal.new(1,1,-1),Decimal.new(1,1,-20)) 
+  ```
+Para melhores detalhes da biblioteca, recomenda-se uma breve leitura da [documentação da biblioteca](https://hexdocs.pm/decimal/readme.html)
+A função retornará o número com a precisão indicada no formato de string.
+* O código do módulo está presente no arquivo [tarefa_1.ex](./lib/tarefa_1.ex).
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/first_project](https://hexdocs.pm/first_project).
+
 
